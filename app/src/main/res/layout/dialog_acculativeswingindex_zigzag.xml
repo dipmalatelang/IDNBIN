@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/TvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACCUMULATIVE SWING INDES"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:background="#19FFFFFF"
+        android:textColor="@color/colorWhite"
+        android:drawableEnd="@drawable/ic_close"/>
+
+
+
+        <RelativeLayout
+            android:id="@+id/RlMain"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/TvTitle"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/RLPeriodTrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#1DFFFFFF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit Move Value"
+                    android:padding="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorLightGray"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thin"
+                    android:padding="10dp"
+                    android:background="#10FFFFFF"
+                    android:textColor="@color/colorLightGray"
+                    android:layout_toStartOf="@+id/PeriodValue"/>
+
+
+                <EditText
+                    android:id="@+id/PeriodValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+                    android:padding="4dp"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/TvAdd"
+                    android:textColor="@color/colorLightGray"/>
+
+
+                <ImageView
+                    android:id="@+id/TvAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    android:padding="10dp"
+                    android:background="#10FFFFFF"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorLightGray"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/TvMainLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main line"
+                android:padding="12dp"
+                android:layout_below="@+id/RLPeriodTrix"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/TvColorPickerMainLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1DFFFFFF"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_arrow_drop_down"
+                android:textColor="@color/colorLightGray"
+                android:drawableEnd="@drawable/ic_radio_button_"
+
+                android:layout_gravity="start"
+                android:layout_below="@+id/TvMainLine"/>
+
+            <RelativeLayout
+                android:id="@+id/RLMainLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1DFFFFFF"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/TvColorPickerMainLine">
+
+                <ImageView
+                    android:id="@+id/IvThinTrix"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_border_white"
+                    android:src="@drawable/ic_thin"
+                    android:layout_toStartOf="@+id/IvMediumTrix"/>
+
+                <ImageView
+                    android:id="@+id/IvMediumTrix"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_line_big"
+                    android:layout_toStartOf="@+id/IvThickTrix"/>
+
+                <ImageView
+                    android:id="@+id/IvThickTrix"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_line_b"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/RLMainLine"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/BtnRestoreAxd"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="Restore"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/bg_border"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="apply"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:background="@drawable/btn_background_green"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>
